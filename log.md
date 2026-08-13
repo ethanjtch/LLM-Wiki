@@ -1,3 +1,8 @@
+---
+title: 时间日志
+type: log
+---
+
 # 时间日志
 
 append-only 操作记录。格式：`## [YYYY-MM-DD] 操作类型 | 标题`。
