@@ -208,6 +208,7 @@ plugins:
     options:
       links:
         GitHub: https://github.com/ethanjtch/LLM-Wiki
+        Icons by Magnific (Flaticon): https://www.flaticon.com/free-icons/wikipedia
     layout:
       position: footer
       priority: 50

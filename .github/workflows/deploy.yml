@@ -37,6 +37,9 @@ jobs:
       - name: Use custom config
         run: cp content-src/publish/quartz.config.yaml quartz-engine/quartz.config.yaml
 
+      - name: Use custom icon
+        run: cp content-src/publish/assets/wikipedia.png quartz-engine/quartz/static/icon.png
+
       - name: Copy content into engine
         run: |
           cp -R content-src/. quartz-engine/content/
