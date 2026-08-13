@@ -12,6 +12,8 @@ configuration:
     - .DS_Store
     - AGENTS.md
     - publish
+    - .github
+    - raw
   theme:
     fontOrigin: googleFonts
     cdnCaching: true

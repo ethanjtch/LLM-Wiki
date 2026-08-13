@@ -20,6 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
+          path: content-src
           fetch-depth: 0
 
       - uses: actions/setup-node@v6
@@ -34,14 +35,13 @@ jobs:
           npx quartz plugin install
 
       - name: Use custom config
-        run: cp publish/quartz.config.yaml quartz-engine/quartz.config.yaml
+        run: cp content-src/publish/quartz.config.yaml quartz-engine/quartz.config.yaml
 
       - name: Symlink content
-        run: ln -s "${{ github.workspace }}" quartz-engine/content
+        run: ln -s ../content-src quartz-engine/content
 
       - name: Build Quartz
         run: |
-          ln -s "${{ github.workspace }}" "${{ runner.temp }}/content"
           cd quartz-engine
           npx quartz build
 
