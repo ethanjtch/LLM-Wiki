@@ -1,0 +1,9 @@
+{
+  "attachmentFolderPath": "raw/assets",
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "rightToLeft": false,
+  "spellcheck": false,
+  "alwaysUpdateLinks": true,
+  "openBehavior": "file:wiki/首页.md"
+}
