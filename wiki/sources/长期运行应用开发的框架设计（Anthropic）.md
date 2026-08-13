@@ -15,7 +15,6 @@ sources: 1
 - **作者**：Prithvi Rajasekaran（Anthropic Labs）
 - **发布**：2026-05-24
 - **原文**：https://www.anthropic.com/engineering/harness-design-long-running-apps
-- **原始文件**：`raw/适用于长期运行的应用程序开发中的设备设计.md`（原标题 *Harness design for long-running application development*）
 
 ## 核心论点
 第一篇 [[长期运行代理的有效管理工具（Anthropic）]] 解决了"跨会话连贯"，但复杂自主构建仍有瓶颈。作者借鉴生成对抗网络（GAN），引入**生成器 + 评估器**多代理结构，解决两大顽疾：长任务的上下文丧失，以及代理的**自我评估偏差**。最终架构为 **planner → generator → evaluator** 三代理，能在数小时自主会话中产出功能完整的全栈应用。核心工程原则：**先找到最简单方案，只在有需要时增加复杂度**。

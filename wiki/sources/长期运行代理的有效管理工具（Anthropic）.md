@@ -15,7 +15,6 @@ sources: 1
 - **作者**：Justin Young（Anthropic）
 - **发布**：2025-11-26
 - **原文**：https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
-- **原始文件**：`raw/适用于长期运行的代理的有效管理工具.md`
 
 ## 核心论点
 长期运行代理（横跨多个上下文窗口、需要数小时甚至数天）的真正瓶颈不是模型能力，而是**管理工具（harness）设计**。Claude Agent SDK 靠 compaction 仍不够：默认提示下，连 Opus 4.5 也做不出生产级应用。解法是双代理结构——**初始化代理**在首次会话铺好环境，**编码代理**在每次会话做**增量进展并留下清晰工件**。
