@@ -18,3 +18,7 @@ append-only 操作记录。格式：`## [YYYY-MM-DD] 操作类型 | 标题`。
 
 处理 raw/ 新导入的 2 篇 Anthropic 工程博客（《Effective harnesses for long-running agents》2025-11、《Harness design for long-running application development》2026-05）。来源页 2，概念页 5（harness（代理框架）、上下文焦虑、上下文重置、自我评估偏差、生成器评估器循环），实体页 1（Anthropic），综合页 1（长期运行代理的工程实践）。更新 Agent/可验证性/上下文碎片化/AI时代论与知识工作 4 页——特别是为[[可验证性]]的未决问题补上工程化答案雏形（评分标准改写 + 独立评审 + 浏览器自动化点测）。更新 index 与首页。
 
+## [2026-08-13] lint | 二次健康检查（含系统层部署体检）
+
+内容层：脚本扫描 37 个 wiki 页 + index.md 链接图，无红色链接、无孤儿页、无 index↔页面不一致、无矛盾。23 页 updated 停在 08-12 属未改动豁免。系统层：git 与 origin 同步、Actions 3 次连续 success、站点关键页面全 200、wikilink 跳转正常。沉淀综合页[[知识库健康检查（2026-08-13二次）]]。附：构建管道三坑（symlink 无限递归、软链目标目录名污染 URL、KaTeX 对中文 $ 误报）已修复，均见 deploy.yml/quartz.config.yaml 与 log 相关条目。
+
