@@ -7,7 +7,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: zh-CN
-  baseUrl: ethanjtch.github.io
+  baseUrl: ethanjtch.github.io/LLM-Wiki
   ignorePatterns:
     - .DS_Store
     - AGENTS.md
