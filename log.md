@@ -26,3 +26,11 @@ append-only 操作记录。格式：`## [YYYY-MM-DD] 操作类型 | 标题`。
 
 改造（只动 CI 与 publish/，wiki 文档一字未改）：① `wiki/首页.md` 设为站点首页 → 访问根路径 `/` 即渲染「LLM Wiki 首页」门面页，原目录页 `index.md` 于构建时改名 `索引` 保留，全库 `[[index]]` 链接在 CI 中重写为 `[[索引]]`（sed 替 heredoc、python 单行遍历）；② 修复菜单栏/search 跳转丢 `/LLM-Wiki` 前缀：`quartz.config.yaml` `baseUrl` 由 `ethanjtch.github.io` 改为 `ethanjtch.github.io/LLM-Wiki`，线上 `<body data-basepath="/LLM-Wiki">` 生效。验证：线上 `/`、`/索引` 200，search/explorer 链接正确；本地 Quartz serve（/tmp/quartz-local）复现一致性。
 
+## [2026-08-13] setup | 绑定自定义域名 wiki.ethanfun.xyz
+
+Cloudflare DNS（CNAME wiki → ethanjtch.github.io，手动配置）已验证生效。`quartz.config.yaml` `baseUrl` 改为 `wiki.ethanfun.xyz`，CNAME 插件自动生成 CNAME 文件随部署上线，GitHub Pages 设置自定义域名并签发 Let's Encrypt 证书。验证：`https://wiki.ethanfun.xyz/` 200、`/索引` 200、HTTPS 强制可用；旧地址 `ethanjtch.github.io/LLM-Wiki` 因自定义域名自动 404。
+
+## [2026-08-13] setup | 添加站点图标与版权声明
+
+favicon：用户从 [Flaticon Wikipedia icons](https://www.flaticon.com/free-icons/wikipedia) 下载 Magnific 的 Wikipedia 图标（512×512 PNG）存入 `publish/assets/wikipedia.png`，CI 构建时复制为引擎 `quartz/static/icon.png`，favicon 插件生成 48×48 favicon.ico。footer：`links` 增加版权行「Icons by Magnific (Flaticon)」链接回 Flaticon 授权页。验证：线上 `/favicon.ico` 200、footer 链接正常。
+
