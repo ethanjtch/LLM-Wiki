@@ -1,13 +1,13 @@
 ---
-title: "Gemini in Chrome 国内用不了？手把手教你「强制开启」！（保姆级）"
-source: "https://blog.csdn.net/weixin_40774379/article/details/157622775"
+title: Gemini in Chrome 国内用不了？手把手教你「强制开启」！（保姆级）
+source: https://blog.csdn.net/weixin_40774379/article/details/157622775
 author:
-  - "[[weixin_40774379]]"
+  - AI信息Gap
 published: 2026-02-02
 created: 2026-07-10
-description: "文章浏览阅读8.3k次，点赞13次，收藏17次。Gemini in Chrome 国内用不了？手把手教你「强制开启」！（保姆级）_chrome gemeni 没有图标"
+description: 文章浏览阅读8.3k次，点赞13次，收藏17次。Gemini in Chrome 国内用不了？手把手教你「强制开启」！（保姆级）_chrome gemeni 没有图标
 tags:
-  - "clippings"
+  - clippings
 ---
 话接上文。
 

@@ -20,8 +20,6 @@ description: |-
   - Netflix 的非英语原创剧是一种留存用户的工具，目的是让冲着热门美剧来的外国用户看完还有东西可看。虽然在欧美市场之外的 ARPU 比较低，但制作成本也低，比如怪奇物语一集就要三千万，整部鱿鱼游戏才两千万出头。所以苹果、HBO 现在也开始学这个套路，但长期收效谁也不知道。
 tags:
   - clippings
-  - interview
-  - Netflix
 ---
 ## How Much Netflix Can the World Absorb?
 

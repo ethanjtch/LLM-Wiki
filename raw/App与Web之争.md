@@ -7,7 +7,6 @@ published: 2026-02-14
 aliases:
 tags:
   - clippings
-  - internet
 ---
 还记得以前的App与web之争吗？我印象比较深刻的两件事是：乔布斯痛批Flash并倾向于HTML，但最终走向了App；不久之后，马克扎克伯格执意押注HTML，但最终也走向了App。
 
