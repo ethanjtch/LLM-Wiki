@@ -32,13 +32,15 @@ jobs:
           git clone --depth 1 https://github.com/jackyzha0/quartz.git quartz-engine
           cd quartz-engine
           npm ci
-          npx quartz plugin install
+          npx quartz plugin install --from-config
 
       - name: Use custom config
         run: cp content-src/publish/quartz.config.yaml quartz-engine/quartz.config.yaml
 
-      - name: Symlink content
-        run: ln -s ../content-src quartz-engine/content
+      - name: Copy content into engine
+        run: |
+          cp -R content-src/. quartz-engine/content/
+          rm -rf quartz-engine/content/.git quartz-engine/content/.obsidian quartz-engine/content/publish quartz-engine/content/.DS_Store
 
       - name: Build Quartz
         run: |
