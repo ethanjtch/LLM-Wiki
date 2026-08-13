@@ -47,16 +47,7 @@ jobs:
           mv quartz-engine/content/index.md quartz-engine/content/索引.md
           cp quartz-engine/content/wiki/首页.md quartz-engine/content/index.md
           rm -f quartz-engine/content/wiki/首页.md
-          python3 - <<'EOF'
-import pathlib, re
-pattern = re.compile(r'\[\[index\|([^\]]*)\]\]|\[\[index\]\]')
-for p in pathlib.Path('quartz-engine/content').rglob('*.md'):
-    text = p.read_text()
-    new = pattern.sub(lambda m: f'[[索引]]', text)
-    if new != text:
-        p.write_text(new)
-        print(f'rewritten: {p}')
-EOF
+          python3 -c "import pathlib,re; p=re.compile(r'\[\[index\|([^\]]*)\]\]|\[\[index\]\]'); [ (lambda f: (f.write_text(p.sub(lambda m: '[[索引]]', f.read_text()))))(pth) for pth in pathlib.Path('quartz-engine/content').rglob('*.md') ]"
           ls quartz-engine/content/
 
       - name: Build Quartz
