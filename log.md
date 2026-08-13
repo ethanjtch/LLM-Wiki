@@ -22,3 +22,7 @@ append-only 操作记录。格式：`## [YYYY-MM-DD] 操作类型 | 标题`。
 
 内容层：脚本扫描 37 个 wiki 页 + index.md 链接图，无红色链接、无孤儿页、无 index↔页面不一致、无矛盾。23 页 updated 停在 08-12 属未改动豁免。系统层：git 与 origin 同步、Actions 3 次连续 success、站点关键页面全 200、wikilink 跳转正常。沉淀综合页[[知识库健康检查（2026-08-13二次）]]。附：构建管道三坑（symlink 无限递归、软链目标目录名污染 URL、KaTeX 对中文 $ 误报）已修复，均见 deploy.yml/quartz.config.yaml 与 log 相关条目。
 
+## [2026-08-13] setup | 站点首页改造 + 菜单栏链接修复
+
+改造（只动 CI 与 publish/，wiki 文档一字未改）：① `wiki/首页.md` 设为站点首页 → 访问根路径 `/` 即渲染「LLM Wiki 首页」门面页，原目录页 `index.md` 于构建时改名 `索引` 保留，全库 `[[index]]` 链接在 CI 中重写为 `[[索引]]`（sed 替 heredoc、python 单行遍历）；② 修复菜单栏/search 跳转丢 `/LLM-Wiki` 前缀：`quartz.config.yaml` `baseUrl` 由 `ethanjtch.github.io` 改为 `ethanjtch.github.io/LLM-Wiki`，线上 `<body data-basepath="/LLM-Wiki">` 生效。验证：线上 `/`、`/索引` 200，search/explorer 链接正确；本地 Quartz serve（/tmp/quartz-local）复现一致性。
+
