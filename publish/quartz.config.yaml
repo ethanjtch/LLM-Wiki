@@ -87,6 +87,8 @@ plugins:
     enabled: true
     options:
       renderEngine: katex
+      katexOptions:
+        strict: false
     order: 80
   - source: "@quartz-community/citations"
     enabled: false
