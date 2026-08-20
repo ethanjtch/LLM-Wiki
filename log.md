@@ -39,3 +39,7 @@ Cloudflare DNS（CNAME wiki → ethanjtch.github.io，手动配置）已验证�
 
 favicon：用户从 [Flaticon Wikipedia icons](https://www.flaticon.com/free-icons/wikipedia) 下载 Magnific 的 Wikipedia 图标（512×512 PNG）存入 `publish/assets/wikipedia.png`，CI 构建时复制为引擎 `quartz/static/icon.png`，favicon 插件生成 48×48 favicon.ico。footer：`links` 增加版权行「Icons by Magnific (Flaticon)」链接回 Flaticon 授权页。验证：线上 `/favicon.ico` 200、footer 链接正常。
 
+## [2026-08-14] ingest | 大语言模型维基（Karpathy 方法论原文）
+
+处理 raw/ 新导入的 Karpathy gist《LLM Wiki》（LLM Wiki 模式方法论，本仓库即其实例化）。用户确认处理方向为「元来源 + 概念页」。来源页 1（大语言模型维基（Karpathy）），概念页 1（LLM Wiki 模式）——沉淀 RAG vs 持久 wiki 对比、三层架构、Ingest/Query/Lint、index+log、Memex 谱系，并标注本仓库为直接实例化。更新 index（19 概念 / 9 来源）、首页（新增「本模式」主题入口）。
+
